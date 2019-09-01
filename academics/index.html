@@ -68,6 +68,35 @@
     pointer-events: none;
 }
 }
+.phonelink{
+  position: fixed; /* Lock location always on the scree */
+  bottom: 0; /* Set to the bottom */
+  right: 0; /* Set to the right */
+  margin: 22px; /* Add space around background */
+}
+.phoneicon{
+  width: 49px; /* Set width of icon */
+  height: 49px; /* Set height of icon */
+}
+
+@media screen and (max-width: 480px){
+  .lgscreenphone{
+      display: none;  /* On small screens make phone icon disappear */
+  }
+  .mbscreenphone{
+      display: block; /* On small screens make phone icon appear */
+  }
+}
+@media screen and (min-width: 481px){
+  .mbscreenphone{
+      display: none; /* On large screens make phone icon disappear */
+  }
+  .lgscreenphone{
+      display: block; /* On large screens make phone icon appear */
+  }
+ 
+  
+}
 
 </style>
 
@@ -661,6 +690,7 @@
         </div>
       </div>
     </div> 
+    <a class="mbscreenphone phonelink" href="tel:8251856842"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>
 
 
     <div class="footer">
@@ -674,7 +704,7 @@
               <li>BDS</li>
               <li>BAMS</li>
               <li>BHMS</li>
-              <li>B>tech / Engineering</li>
+              <li>B.tech / Engineering</li>
               <li>Pharma D</li>
                <li>B Pharma</li>
                 <li>M Pharma</li>
