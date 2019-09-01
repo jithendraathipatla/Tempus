@@ -67,6 +67,13 @@
     margin: 50px;
     pointer-events: none;
 }
+label {
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.form-control {
+    margin-bottom: 10px;
+}
 }
 .phonelink{
   position: fixed; /* Lock location always on the scree */
@@ -285,13 +292,13 @@
           </div>
           <div class="modal-body" id="contactUsForm">
             <form class="form-box" name="form3" id="contactUsForm" validation>
-              <label for="name">Name</label>
+              <label for="name" style="color: crimson; font-weight:500">Name</label>
               <input type="text" name="client_name" id="aa" class="form-control" placeholder="Enter Your Name" required>
-              <label for="email">Email ID</label>
+              <label for="email" style="color: crimson; font-weight:500">Email ID</label>
               <input type="email" name="client_mail_id" id="bb" class="form-control" placeholder="Enter Your Email" required>
-              <label for="phone">Phone</label>
+              <label for="phone" style="color: crimson; font-weight:500">Phone</label>
               <input type="tel" name="client_phone_number" minlength=10 maxlength=13 id="cc" class="form-control" placeholder="Enter Your Phone" required>
-              <label for="message">Message</label>
+              <label for="message" style="color: crimson; font-weight:500">Message</label>
               <textarea name="client_message" class="form-control" id="dd" placeholder="Enter Your Message Here..." required></textarea><br>
              <button type="submit" name="submit" value="Send" style="background: #101010; color: white; border-radius:5px; border:none;" onclick="contactUs()">Submit</button>
           </form>
