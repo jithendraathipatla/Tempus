@@ -162,7 +162,7 @@ label {
                   <a href="courses.html" class="nav-link text-left">Courses</a>
                 </li>
                 <li>
-                    <a href="contact.html" class="nav-link text-left">Contact</a>
+                    <a href="#contactUsPage" class="nav-link text-left">Contact</a>
                   </li>
                <li><a href="tel:+918251856842" id="hi"><span style="font-weight:500; font-size: 20px; color:#0af90afc" id="hii">call:8251856842</span></a></li>
               </ul>                                                                                                                                                                                                                                                                                          </ul>
@@ -292,13 +292,13 @@ label {
           </div>
           <div class="modal-body" id="contactUsForm">
             <form class="form-box" name="form3" id="contactUsForm" validation>
-              <label for="name" style="color: crimson; font-weight:500">Name</label>
+              <label for="name" style="color: crimson; font-weight:500">Name:</label>
               <input type="text" name="client_name" id="aa" class="form-control" placeholder="Enter Your Name" required>
-              <label for="email" style="color: crimson; font-weight:500">Email ID</label>
+              <label for="email" style="color: crimson; font-weight:500">Email ID:</label>
               <input type="email" name="client_mail_id" id="bb" class="form-control" placeholder="Enter Your Email" required>
-              <label for="phone" style="color: crimson; font-weight:500">Phone</label>
+              <label for="phone" style="color: crimson; font-weight:500">Phone:</label>
               <input type="tel" name="client_phone_number" minlength=10 maxlength=13 id="cc" class="form-control" placeholder="Enter Your Phone" required>
-              <label for="message" style="color: crimson; font-weight:500">Message</label>
+              <label for="message" style="color: crimson; font-weight:500">Message:</label>
               <textarea name="client_message" class="form-control" id="dd" placeholder="Enter Your Message Here..." required></textarea><br>
              <button type="submit" name="submit" value="Send" style="background: #101010; color: white; border-radius:5px; border:none;" onclick="contactUs()">Submit</button>
           </form>
@@ -681,20 +681,20 @@ label {
       </div>
     </div>
 
-    <div class="site-section ftco-subscribe-1" style="background-image: url('images/bg_1.jpg')">
+    <div class="site-section ftco-subscribe-1" style="background-image: url('images/bg_1.jpg')" id="contactUsPage">
       <div class="container">
+         <span style="color:white">Contact US</span> 
         <div class="row align-items-center">
-          <div class="col-lg-7">
-            <h2>Subscribe to us!</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,</p>
-          </div>
-          <div class="col-lg-5">
-            <form action="" class="d-flex">
-              <input type="text" class="rounded form-control mr-2 py-3" placeholder="Enter your email">
-              <button class="btn btn-primary rounded py-3 px-4" type="submit">Send</button>
+       
+          <div class="col-lg-12" id="writing">
+            <form name="form4" class="d-flex">
+              <input type="text" name="name" class="rounded form-control mr-2 py-3" placeholder="Your Name" id="nameValue">
+              <input type="text" name="email" class="rounded form-control mr-2 py-3" placeholder="Enter your email" id="emailValue">
+              <input type="Number" name="phone" class="rounded form-control mr-2 py-3" placeholder="Your Phone Number" id="phoneValue">
+              <button class="btn btn-primary rounded py-3 px-4" type="submit" onclick="sendButton()">Send</button>
             </form>
           </div>
-        </div>
+       </div>
       </div>
     </div> 
     <a class="mbscreenphone phonelink" href="tel:8251856842"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>
@@ -832,6 +832,54 @@ label {
     console.log(data);
    
     $("#contactUsForm").html("<h4 style=\"color:black\">Thank you for contacting us, We will get in touch with you Shortly.</h4>");
+   
+  }
+
+});
+  }
+}
+
+function sendButton(){
+  var a = document.forms["form4"]["name"].value;
+  var b =  document.forms["form4"]["email"].value;
+  var c =  document.forms["form4"]["phone"].value;
+ 
+  if (a == "" || b === "" || c === "" ) {
+    alert("please fill all the details");
+    return false;
+  }
+  else if( c.length<10){
+    alert("please give a valid phone number");
+    event.preventDefault();
+    return false;
+  }
+  else{
+    event.preventDefault();
+    e=document.getElementById("nameValue").value;
+   f=document.getElementById("emailValue").value;
+    g=document.getElementById("phoneValue").value;
+   var data = {
+      "project_name": "Tempus",
+      "client_name": e,
+      "client_mail_id": f,
+      "client_phone_number": g,
+      "client_message": "null"
+     } 
+    
+ var c = JSON.stringify(data);
+ console.log(c);
+ 
+ $.ajax({
+  url: "https://wmy59z5nb1.execute-api.us-east-1.amazonaws.com/prod/",
+  data: c,
+  cache: false,
+  processData: false,
+  contentType: false,
+  type: 'POST',
+  success: function (data) {
+    console.log(data);
+   
+    $("#writing").html("<h4 style=\"color:white\">Thank you for contacting us, We will get in touch with you Shortly.</h4>");
    
   }
 
