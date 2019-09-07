@@ -37,6 +37,14 @@
    
  
  }
+ .modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background: aliceblue !important;
+}
  #hii{
  
      font-weight: 500;
@@ -148,7 +156,7 @@ label {
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="index.html" class="d-block">
-              <img src="images/logo1.jpeg" alt="Image" class="img-fluid" height="20px" width="120px">
+              <img src="images/tempus.jpeg" alt="Image" class="img-fluid" >
             </a>
           </div>
           <div class="mr-auto">
@@ -157,18 +165,14 @@ label {
                 <li class="active">
                   <a href="index.html" class="nav-link text-left">Home</a>
                 </li>
-                <li class="has-children">
-                  <a href="about.html" class="nav-link text-left">About Us</a>
-                  <ul class="dropdown">
-                    <li><a href="teachers.html">Our Teachers</a></li>
-                    <li><a href="about.html">Our School</a></li>
-                  </ul>
+                <li >
+                  <a href="#AboutUs" class="nav-link text-left">About Us</a>
                 </li>
                 <li>
-                  <a href="admissions.html" class="nav-link text-left">Admissions</a>
+                  <a href="#Testimonials" class="nav-link text-left">Testimonials</a>
                 </li>
                 <li>
-                  <a href="courses.html" class="nav-link text-left">Courses</a>
+                  <a href="#courses" class="nav-link text-left">Courses</a>
                 </li>
                 <li>
                     <a href="#contactUsPage" class="nav-link text-left">Contact</a>
@@ -180,8 +184,8 @@ label {
           </div>
           <div class="ml-auto">
             <div class="social-wrap">
-              <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="https://www.facebook.com/tempusconsultancyservices" target="_blank"><span class="icon-facebook"></span></a>
+              <a href="https://twitter.com/servicestempus" target="_blank"><span class="icon-twitter"></span></a>
              
 
               <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
@@ -206,7 +210,7 @@ label {
         </div>
       </div>
 
-      <div class="intro-section" style="background-image: url('images/hero_1.jpg');">
+      <div class="intro-section" style="background-image: url('https://i.pinimg.com/originals/35/7c/f9/357cf90e28e36f4136b246cf1e828566.jpg');">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
@@ -307,13 +311,13 @@ label {
           </div>
           <div class="modal-body" id="contactUsForm">
             <form class="form-box" name="form3" id="contactUsForm" validation>
-              <label for="name" style="color: crimson; font-weight:500">Name:</label>
+              <label for="name" style="color:black; font-weight:600">Name:</label>
               <input type="text" name="client_name" id="aa" class="form-control" placeholder="Enter Your Name" required>
-              <label for="email" style="color: crimson; font-weight:500">Email ID:</label>
+              <label for="email" style="color: black; font-weight:600">Email ID:</label>
               <input type="email" name="client_mail_id" id="bb" class="form-control" placeholder="Enter Your Email" required>
-              <label for="phone" style="color: crimson; font-weight:500">Phone:</label>
+              <label for="phone" style="color: black; font-weight:600">Phone:</label>
               <input type="tel" name="client_phone_number" minlength=10 maxlength=13 id="cc" class="form-control" placeholder="Enter Your Phone" required>
-              <label for="message" style="color: crimson; font-weight:500">Message:</label>
+              <label for="message" style="color: black; font-weight:600">Message:</label>
               <textarea name="client_message" class="form-control" id="dd" placeholder="Enter Your Message Here..." required></textarea><br>
              <button type="submit" name="submit" value="Send" style="background: #101010; color: white; border-radius:5px; border:none;" onclick="contactUs()">Submit</button>
           </form>
@@ -464,16 +468,13 @@ label {
           </div>
         </div>
 
-        <!-- Button trigger modal -->
+      
 
         
       </div>
     </div>     -->
 
-    
-
-
-    <div class="section-bg style-1" style="background-image: url('images/about_1.jpg');">
+<div class="section-bg style-1" style="background-image: url('images/about_1.jpg');" id="AboutUs">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
@@ -491,7 +492,7 @@ label {
     </div>
 
     <!-- // 05 - Block -->
-  <div class="site-section">
+  <div class="site-section" id="Testimonials">
       <div class="container">
         <div class="row mb-5">
           <div class="col-lg-4">
@@ -576,25 +577,23 @@ label {
     </div>
     
 
-    <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');">
+    <div class="section-bg style-1" style="background-image: url('images/hero_1.jpg');" >
       <div class="container">
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="icon flaticon-mortarboard"></span>
             <h3>Our Philosphy</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea? Dolore, amet reprehenderit.</p>
+            <p>“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.”.</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="icon flaticon-school-material"></span>
             <h3>Academics Principle</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
-              Dolore, amet reprehenderit.</p>
+            <p>“When you see no present advantage, walk by faith and not by sight. Do God the honor to trust Him when it comes to matters of loss for the sake of principle.”</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="icon flaticon-library"></span>
             <h3>Key of Success</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis recusandae, iure repellat quis delectus ea?
-              Dolore, amet reprehenderit.</p>
+            <p>“I can't give you a sure-fire formula for success, but I can give you a formula for failure: try to please everybody all the time.”</p>
           </div>
         </div>
       </div>
@@ -703,7 +702,7 @@ label {
     <a class="mbscreenphone phonelink" href="tel:8251856842"><img class="phoneicon" src="https://freeiconshop.com/wp-content/uploads/edd/phone-flat.png"></a>
 
 
-    <div class="footer">
+    <div class="footer" id="courses">
       <div class="container">
           <h1 class="footer-heading" style="text-align: center; color:blue"><span>LIST OF ALL COURSES</span></h1>
         <div class="row">

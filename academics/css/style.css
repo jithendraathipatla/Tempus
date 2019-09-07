@@ -13,6 +13,11 @@ body {
   background: #000;
   color: #fff; }
 
+  .img-fluid {
+    max-width: 123%;
+    height: 56px;
+}
+
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
