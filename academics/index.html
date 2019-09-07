@@ -838,14 +838,15 @@ label {
       "client_name": e,
       "client_mail_id": f,
       "client_phone_number": g,
-      "client_message": h
+      "client_message": h,
+      "website_url": "http://www.tempusconsultancyservices.com/",
      } 
     
  var c = JSON.stringify(data);
  console.log(c);
  
  $.ajax({
-  url: "https://wmy59z5nb1.execute-api.us-east-1.amazonaws.com/prod/",
+  url: "https://wmy59z5nb1.execute-api.us-east-1.amazonaws.com/prod/send_email_to_livexcellence",
   data: c,
   cache: false,
   processData: false,
